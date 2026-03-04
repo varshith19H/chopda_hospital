@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chopda Hospital | Multispeciality Cardiac Care in Nashik</title>
+    <meta name="description"
+        content="Chopda Hospital is a leading cardiology-focused multispeciality hospital in Panchavati, Nashik, led by Dr. Anand M. Chopda. Expert cardiac and general medicine.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <!-- FontAwesome for clinical icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Emergency Banner -->
+    <div class="emergency-banner">
+        <div class="container emergency-banner-inner">
+            <span class="e-banner-text"><i class="fas fa-ambulance"></i> 24/7 Emergency Help:
+                <strong>1066</strong></span>
+            <div class="e-banner-actions">
+                <a href="tel:1066" class="btn btn-secondary"
+                    style="padding: 0.3rem 1rem; font-size: 0.85rem; background-color: var(--white); color: var(--brand-red);"><i
+                        class="fas fa-phone-alt"></i> Call Now</a>
+                <a href="https://wa.me/91XXXXXXXXXX" class="btn btn-secondary"
+                    style="padding: 0.3rem 1rem; font-size: 0.85rem; margin-left: 0.5rem;"><i
+                        class="fab fa-whatsapp"></i> WhatsApp</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Top Bar with Trust Signals -->
+    <div class="top-bar">
+        <div class="container top-bar-inner">
+            <span class="trust-signal">
+                <i class="fas fa-star text-gold"></i> 4.3 Rating (113+ Reviews)
+            </span>
+            <span class="trust-signal">
+                <i class="fas fa-heartbeat text-red"></i> 98% Patient Recommendation
+            </span>
+            <div class="contact-quick">
+                <a href="tel:+91XXXXXXXXXX" class="top-link"><i class="fas fa-phone-alt"></i> Call for Appointment</a>
+                <span class="separator">|</span>
+                <span class="top-time"><i class="far fa-clock"></i> Timings: 10 AM - 8 PM</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <header class="main-header">
+        <div class="container header-inner">
+            <div class="brand">
+                <div class="logo">
+                    <div class="logo-ecg">
+                        <!-- Custom CSS ECG or simple image logo placeholder -->
+                        <svg width="40" height="20" viewBox="0 0 40 20" class="ecg-line">
+                            <path d="M0 10 L10 10 L13 2 L18 18 L22 6 L25 10 L40 10" fill="none"
+                                stroke="var(--brand-red)" stroke-width="2" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <div class="brand-text">
+                        <h1>CHOPDA HOSPITAL</h1>
+                        <span class="tagline">Cardiology & General Medicine</span>
+                    </div>
+                </div>
+            </div>
+            <nav class="desktop-nav">
+                <ul>
+                    <li><a href="#services">Clinical Services</a></li>
+                    <li><a href="#doctor">Dr. Anand Chopda</a></li>
+                    <li><a href="#facilities">Infrastructure</a></li>
+                </ul>
+                <a href="#contact" class="btn btn-primary">Book Consultation</a>
+            </nav>
+            <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <div class="hero-text">
+                <div class="hero-badge">18+ Years of Medical Excellence</div>
+                <h2 class="hero-title">Expert Cardiac & General Medical Care in Panchavati</h2>
+                <p class="hero-subtitle">Led by Dr. Anand Manaklal Chopda (MBBS, MD Medicine, DNB Cardiology), providing
+                    precise diagnostics, evidence-based treatments, and comprehensive multispeciality patient care
+                    including Advanced Cardiology, Orthopedics, and 24/7 Emergency Services.</p>
+
+                <div class="hero-actions">
+                    <a href="#contact" class="btn btn-primary btn-large">Request Appointment</a>
+                    <a href="#services" class="btn btn-outline btn-large">View Clinical Services</a>
+                </div>
+
+                <div class="hero-trust">
+                    <div class="trust-item">
+                        <i class="fas fa-heartbeat"></i>
+                        <span>Advanced Cardiology</span>
+                    </div>
+                    <div class="trust-item">
+                        <i class="fas fa-bone"></i>
+                        <span>Expert Orthopedics</span>
+                    </div>
+                    <div class="trust-item">
+                        <i class="fas fa-ambulance"></i>
+                        <span>24/7 Emergency & ICU</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Doctor Leadership Section -->
+    <section id="doctor" class="leadership-section section-padding bg-light">
+        <div class="container">
+            <div class="grid-2-col">
+                <div class="doctor-image-container">
+                    <!-- Placeholder for the actual doctor image we have -->
+                    <div class="doctor-photo-placeholder">
+                        <img src="{{ url_for('static', filename='img/doctor.jpg') }}" alt="Dr. Anand Manaklal Chopda"
+                            class="doctor-img"
+                            onerror="this.src='https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?q=80&w=600&auto=format&fit=crop'">
+                    </div>
+                    <div class="experience-badge">
+                        <span class="years">18+</span>
+                        <span class="text">Years Clinical<br>Experience</span>
+                    </div>
+                </div>
+
+                <div class="doctor-profile">
+                    <h3 class="section-label">Medical Director</h3>
+                    <h2 class="section-heading">Dr. Anand Manaklal Chopda</h2>
+                    <ul class="qualifications">
+                        <li><strong>MBBS</strong></li>
+                        <li><strong>MD</strong> – General Medicine</li>
+                        <li><strong>DNB</strong> – Cardiology</li>
+                    </ul>
+
+                    <p class="doctor-bio">
+                        With over 18 years of clinical experience, Dr. Chopda leads Chopda Hospital with a commitment to
+                        evidence-based medicine and patient-centric care. His dual specialization in General Medicine
+                        and Cardiology enables comprehensive management of complex medical conditions, from acute
+                        cardiac events to chronic systemic diseases.
+                    </p>
+
+                    <div class="credibility-stats">
+                        <div class="stat-box">
+                            <span class="stat-value">55+</span>
+                            <span class="stat-label">Verified Patient Stories</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-value">98%</span>
+                            <span class="stat-label">Recommendation Rate</span>
+                        </div>
+                    </div>
+
+                    <a href="#contact" class="btn btn-secondary mt-4">Consult Dr. Chopda</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services & Treatments Section -->
+    <section id="treatments" class="treatments-section section-padding bg-light reveal">
+        <div class="container">
+            <div class="section-header text-center">
+                <h3 class="section-label">Complete Care</h3>
+                <h2 class="section-heading">Medical Services & Treatments</h2>
+                <div class="heading-line"></div>
+                <p class="section-subtitle" style="margin-top:-1.5rem; margin-bottom: 3rem; color: var(--text-muted);">
+                    Explore our comprehensive healthcare offerings.</p>
+            </div>
+
+            <div class="treatments-category">
+                <h3 class="category-heading"><i class="fas fa-hospital text-blue"></i> Facilities</h3>
+                <div class="treatments-grid">
+                    <div class="treatment-card" data-title="Neonatal Intensive Care Unit (NICU)"
+                        data-desc="Specialized care unit for premature or critically ill newborn babies equipped with advanced monitoring and life-support systems.">
+                        <div class="t-icon"><i class="fas fa-baby"></i></div>
+                        <div class="t-content">
+                            <h4>Neonatal Intensive Care Unit (NICU)</h4><span class="t-link text-muted">Specialized
+                                neonatal care...</span><span class="t-link mt-2 btn btn-outline"
+                                style="padding:0.4rem 0.8rem;">Learn More</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="treatments-category">
+                <h3 class="category-heading"><i class="fas fa-user-md text-blue"></i> Services</h3>
+                <div class="treatments-grid">
+                    <div class="treatment-card" data-title="Diet for Cardiovascular Disorders"
+                        data-desc="Nutritional guidance designed to manage heart conditions such as hypertension, high cholesterol, and coronary artery disease.">
+                        <div class="t-icon"><i class="fas fa-heart"></i></div>
+                        <div class="t-content">
+                            <h4>Diet for Cardiovascular Disorders</h4><span class="t-link text-muted">Dietary
+                                management...</span><span class="t-link mt-2 btn btn-outline"
+                                style="padding:0.4rem 0.8rem;">Learn More</span>
+                        </div>
+                    </div>
+                    <div class="treatment-card" data-title="Nutrition for Pre and Post Pregnancy"
+                        data-desc="Diet plans and counseling for women before, during, and after pregnancy to ensure proper maternal and fetal health.">
+                        <div class="t-icon"><i class="fas fa-female"></i></div>
+                        <div class="t-content">
+                            <h4>Nutrition for Pregnancy</h4><span class="t-link text-muted">Pre/post pregnancy
+                                diet...</span><span class="t-link mt-2 btn btn-outline"
+                                style="padding:0.4rem 0.8rem;">Learn More</span>
+                        </div>
+                    </div>
+                    <div class="treatment-card" data-title="Renal (Kidney) Diet Counselling"
+                        data-desc="Specialized diet recommendations for patients with kidney disease to manage protein, sodium, and fluid intake.">
+                        <div class="t-icon"><i class="fas fa-vial"></i></div>
+                        <div class="t-content">
+                            <h4>Renal Diet Counselling</h4><span class="t-link text-muted">Kidney health
+                                diet...</span><span class="t-link mt-2 btn btn-outline"
+                                style="padding:0.4rem 0.8rem;">Learn More</span>
+                        </div>
+                    </div>
+                    <div class="treatment-card" data-title="Neonatal Nursing"
+                        data-desc="Professional nursing care provided to newborn infants, especially premature or medically vulnerable babies.">
+                        <div class="t-icon"><i class="fas fa-user-nurse"></i></div>
+                        <div class="t-content">
+                            <h4>Neonatal Nursing</h4><span class="t-link text-muted">Infant care services...</span><span
+                                class="t-link mt-2 btn btn-outline" style="padding:0.4rem 0.8rem;">Learn More</span>
+                        </div>
+                    </div>
+                    <div class="treatment-card" data-title="Pediatric Surgical Consultation"
+                        data-desc="Medical consultation for children requiring surgical evaluation or procedures.">
+                        <div class="t-icon"><i class="fas fa-stethoscope"></i></div>
+                        <div class="t-content">
+                            <h4>Pediatric Surgical Consultation</h4><span class="t-link text-muted">Surgical
+                                evaluations...</span><span class="t-link mt-2 btn btn-outline"
+                                style="padding:0.4rem 0.8rem;">Learn More</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="treatments-category">
+                <h3 class="category-heading"><i class="fas fa-microscope text-blue"></i> Tests</h3>
+                <div class="treatments-grid">
+                    <div class="treatment-card" data-title="Kidney Function Test"
+                        data-desc="Diagnostic test used to evaluate how well the kidneys are filtering waste and maintaining fluid balance.">
+                        <div class="t-icon"><i class="fas fa-vial"></i></div>
+                        <div class="t-content">
+                            <h4>Kidney Function Test</h4><span class="t-link mt-2 btn btn-outline"
+                                style="padding:0.4rem 0.8rem;">Learn More</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="treatments-category">
+                <h3 class="category-heading"><i class="fas fa-procedures text-blue"></i> Surgeries</h3>
+                <div class="treatments-grid">
+                    <div class="treatment-card" data-title="Minimally Invasive Urology"
+                        data-desc="Advanced urological procedures performed using small incisions and specialized instruments for faster recovery.">
+                        <div class="t-icon"><i class="fas fa-syringe"></i></div>
+                        <div class="t-content">
+                            <h4>Minimally Invasive Urology</h4><span class="t-link mt-2 btn btn-outline"
+                                style="padding:0.4rem 0.8rem;">Learn More</span>
+                        </div>
+                    </div>
+                    <div class="treatment-card" data-title="Arthroplasty"
+                        data-desc="Surgical reconstruction or replacement of joints to restore mobility and reduce pain.">
+                        <div class="t-icon"><i class="fas fa-bone"></i></div>
+                        <div class="t-content">
+                            <h4>Arthroplasty</h4><span class="t-link mt-2 btn btn-outline"
+                                style="padding:0.4rem 0.8rem;">Learn More</span>
+                        </div>
+                    </div>
+                    <div class="treatment-card" data-title="Colorectal Surgery"
+                        data-desc="Surgical treatment of diseases affecting the colon, rectum, and anus.">
+                        <div class="t-icon"><i class="fas fa-procedures"></i></div>
+                        <div class="t-content">
+                            <h4>Colorectal Surgery</h4><span class="t-link mt-2 btn btn-outline"
+                                style="padding:0.4rem 0.8rem;">Learn More</span>
+                        </div>
+                    </div>
+                    <div class="treatment-card" data-title="Pediatric Otolaryngology"
+                        data-desc="Surgical treatment of ear, nose, and throat conditions in children.">
+                        <div class="t-icon"><i class="fas fa-child"></i></div>
+                        <div class="t-content">
+                            <h4>Pediatric Otolaryngology</h4><span class="t-link mt-2 btn btn-outline"
+                                style="padding:0.4rem 0.8rem;">Learn More</span>
+                        </div>
+                    </div>
+                    <div class="treatment-card" data-title="Shoulder Replacement"
+                        data-desc="Procedure where a damaged shoulder joint is replaced with an artificial implant.">
+                        <div class="t-icon"><i class="fas fa-user-injured"></i></div>
+                        <div class="t-content">
+                            <h4>Shoulder Replacement</h4><span class="t-link mt-2 btn btn-outline"
+                                style="padding:0.4rem 0.8rem;">Learn More</span>
+                        </div>
+                    </div>
+                    <div class="treatment-card" data-title="Gall Bladder Surgery"
+                        data-desc="Surgical removal of the gallbladder, usually performed to treat gallstones.">
+                        <div class="t-icon"><i class="fas fa-procedures"></i></div>
+                        <div class="t-content">
+                            <h4>Gall Bladder Surgery</h4><span class="t-link mt-2 btn btn-outline"
+                                style="padding:0.4rem 0.8rem;">Learn More</span>
+                        </div>
+                    </div>
+                    <div class="treatment-card" data-title="Knee Replacement"
+                        data-desc="Surgery to replace a damaged knee joint with an artificial joint.">
+                        <div class="t-icon"><i class="fas fa-bone"></i></div>
+                        <div class="t-content">
+                            <h4>Knee Replacement</h4><span class="t-link mt-2 btn btn-outline"
+                                style="padding:0.4rem 0.8rem;">Learn More</span>
+                        </div>
+                    </div>
+                    <div class="treatment-card" data-title="Laparoscopic Surgery"
+                        data-desc="Minimally invasive surgery performed using a small camera and specialized instruments.">
+                        <div class="t-icon"><i class="fas fa-camera"></i></div>
+                        <div class="t-content">
+                            <h4>Laparoscopic Surgery</h4><span class="t-link mt-2 btn btn-outline"
+                                style="padding:0.4rem 0.8rem;">Learn More</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="treatments-category">
+                <h3 class="category-heading"><i class="fas fa-pills text-blue"></i> Treatments</h3>
+                <div class="treatments-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+                    <div class="treatment-card" data-title="Viral Fever"
+                        data-desc="Treatment of fever caused by viral infections with supportive medication and monitoring.">
+                        <div class="t-icon"><i class="fas fa-thermometer-half"></i></div>
+                        <div class="t-content">
+                            <h4>Viral Fever</h4><span class="t-link mt-2 btn btn-outline"
+                                style="padding:0.4rem 0.8rem;">Learn More</span>
+                        </div>
+                    </div>
+                    <div class="treatment-card" data-title="Gastroenteritis"
+                        data-desc="Treatment for stomach and intestinal infection causing diarrhea, vomiting, and dehydration.">
+                        <div class="t-icon"><i class="fas fa-stomach"></i></div>
+                        <div class="t-content">
+                            <h4>Gastroenteritis</h4><span class="t-link mt-2 btn btn-outline"
+                                style="padding:0.4rem 0.8rem;">Learn More</span>
+                        </div>
+                    </div>
+                    <div class="treatment-card" data-title="Gastritis"
+                        data-desc="Medical care for inflammation of the stomach lining.">
+                        <div class="t-icon"><i class="fas fa-fire"></i></div>
+                        <div class="t-content">
+                            <h4>Gastritis</h4><span class="t-link mt-2 btn btn-outline"
+                                style="padding:0.4rem 0.8rem;">Learn More</span>
+                        </div>
+                    </div>
+                    <div class="treatment-card" data-title="Abdominal Pain"
+                        data-desc="Diagnosis and treatment of pain originating from digestive organs.">
+                        <div class="t-icon"><i class="fas fa-exclamation-circle"></i></div>
+                        <div class="t-content">
+                            <h4>Abdominal Pain</h4><span class="t-link mt-2 btn btn-outline"
+                                style="padding:0.4rem 0.8rem;">Learn More</span>
+                        </div>
+                    </div>
+                    <div class="treatment-card" data-title="Skin Disease"
+                        data-desc="Treatment for various dermatological conditions affecting skin health.">
+                        <div class="t-icon"><i class="fas fa-allergies"></i></div>
+                        <div class="t-content">
+                            <h4>Skin Disease</h4><span class="t-link mt-2 btn btn-outline"
+                                style="padding:0.4rem 0.8rem;">Learn More</span>
+                        </div>
+                    </div>
+                    <div class="treatment-card" data-title="Acute Diarrhea"
+                        data-desc="Medical treatment to control dehydration and infection.">
+                        <div class="t-icon"><i class="fas fa-tint-slash"></i></div>
+                        <div class="t-content">
+                            <h4>Acute Diarrhea</h4><span class="t-link mt-2 btn btn-outline"
+                                style="padding:0.4rem 0.8rem;">Learn More</span>
+                        </div>
+                    </div>
+                    <div class="treatment-card" data-title="Rickets"
+                        data-desc="Treatment for vitamin D deficiency affecting bone development in children.">
+                        <div class="t-icon"><i class="fas fa-bone"></i></div>
+                        <div class="t-content">
+                            <h4>Rickets</h4><span class="t-link mt-2 btn btn-outline"
+                                style="padding:0.4rem 0.8rem;">Learn More</span>
+                        </div>
+                    </div>
+                    <div class="treatment-card" data-title="Pulmonary Hypertension"
+                        data-desc="Management of high blood pressure affecting lung arteries.">
+                        <div class="t-icon"><i class="fas fa-lungs"></i></div>
+                        <div class="t-content">
+                            <h4>Pulmonary Hypertension</h4><span class="t-link mt-2 btn btn-outline"
+                                style="padding:0.4rem 0.8rem;">Learn More</span>
+                        </div>
+                    </div>
+                    <div class="treatment-card" data-title="PDA Closures"
+                        data-desc="Procedure to close Patent Ductus Arteriosus, a congenital heart defect.">
+                        <div class="t-icon"><i class="fas fa-heartbeat"></i></div>
+                        <div class="t-content">
+                            <h4>PDA Closures</h4><span class="t-link mt-2 btn btn-outline"
+                                style="padding:0.4rem 0.8rem;">Learn More</span>
+                        </div>
+                    </div>
+                    <div class="treatment-card" data-title="Hemorrhoids"
+                        data-desc="Treatment for swollen veins in the lower rectum and anus.">
+                        <div class="t-icon"><i class="fas fa-band-aid"></i></div>
+                        <div class="t-content">
+                            <h4>Hemorrhoids</h4><span class="t-link mt-2 btn btn-outline"
+                                style="padding:0.4rem 0.8rem;">Learn More</span>
+                        </div>
+                    </div>
+                    <div class="treatment-card" data-title="Cardiomyopathy"
+                        data-desc="Diagnosis and treatment of diseases affecting the heart muscle.">
+                        <div class="t-icon"><i class="fas fa-heart"></i></div>
+                        <div class="t-content">
+                            <h4>Cardiomyopathy</h4><span class="t-link mt-2 btn btn-outline"
+                                style="padding:0.4rem 0.8rem;">Learn More</span>
+                        </div>
+                    </div>
+                    <div class="treatment-card" data-title="Fistula Treatment"
+                        data-desc="Medical and surgical management of abnormal connections between organs.">
+                        <div class="t-icon"><i class="fas fa-procedures"></i></div>
+                        <div class="t-content">
+                            <h4>Fistula Treatment</h4><span class="t-link mt-2 btn btn-outline"
+                                style="padding:0.4rem 0.8rem;">Learn More</span>
+                        </div>
+                    </div>
+                    <div class="treatment-card" data-title="RCT (Root Canal)"
+                        data-desc="Dental procedure to remove infected pulp inside a tooth.">
+                        <div class="t-icon"><i class="fas fa-tooth"></i></div>
+                        <div class="t-content">
+                            <h4>RCT (Root Canal)</h4><span class="t-link mt-2 btn btn-outline"
+                                style="padding:0.4rem 0.8rem;">Learn More</span>
+                        </div>
+                    </div>
+                    <div class="treatment-card" data-title="Weight Loss and Gain Management"
+                        data-desc="Medical and nutritional support to maintain healthy body weight.">
+                        <div class="t-icon"><i class="fas fa-weight"></i></div>
+                        <div class="t-content">
+                            <h4>Weight Loss and Gain Management</h4><span class="t-link mt-2 btn btn-outline"
+                                style="padding:0.4rem 0.8rem;">Learn More</span>
+                        </div>
+                    </div>
+                    <div class="treatment-card" data-title="Measles"
+                        data-desc="Medical care and symptom management for measles infection.">
+                        <div class="t-icon"><i class="fas fa-virus"></i></div>
+                        <div class="t-content">
+                            <h4>Measles</h4><span class="t-link mt-2 btn btn-outline"
+                                style="padding:0.4rem 0.8rem;">Learn More</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Modal -->
+    <div id="service-modal" class="custom-modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content" style="max-width: 600px;">
+            <button class="modal-close" aria-label="Close modal"><i class="fas fa-times"></i></button>
+            <div class="modal-body text-center">
+                <div class="modal-icon-header"><i class="fas fa-briefcase-medical"></i></div>
+                <h3 id="modal-service-title" class="modal-title">Service Title</h3>
+                <p id="modal-service-desc" class="modal-desc" style="font-size: 1.1rem;">Service description goes here.
+                </p>
+                <div class="modal-actions mt-4"
+                    style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+                    <a href="#appointment-booking" class="btn btn-primary modal-btn-contact"
+                        onclick="document.getElementById('service-modal').classList.remove('active');"><i
+                            class="far fa-calendar-check mr-2"></i> Book Appointment</a>
+                    <a href="tel:1066" class="btn btn-danger"><i class="fas fa-phone-alt mr-2"></i> Call Hospital</a>
+                    <a href="https://wa.me/91XXXXXXXXXX" class="btn btn-secondary"><i class="fab fa-whatsapp mr-2"></i>
+                        WhatsApp Consultation</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Our Doctors Section -->
+    <section id="doctors" class="section-padding bg-light reveal">
+        <div class="container">
+            <div class="section-header text-center">
+                <h3 class="section-label">Expert Specialists</h3>
+                <h2 class="section-heading">Our Doctors</h2>
+                <div class="heading-line"></div>
+            </div>
+            <div class="doctors-grid"
+                style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); max-width: 800px; margin: 0 auto;">
+                <div class="doctor-card">
+                    <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?q=80&w=400&auto=format&fit=crop"
+                        alt="Dr. Anand M. Chopda" class="d-card-img">
+                    <div class="d-card-body">
+                        <h4 class="d-card-name">Dr. Anand Chopda</h4>
+                        <div class="d-card-spec">Cardiology & Gen Medicine</div>
+                        <div class="d-card-exp">18+ Years Experience</div>
+                        <p class="text-sm text-muted">MBBS, MD, DNB</p>
+                        <button class="btn btn-outline btn-block mt-4 mb-2">View Profile</button>
+                        <a href="#appointment-booking" class="btn btn-primary btn-block">Book Appointment</a>
+                    </div>
+                </div>
+                <div class="doctor-card">
+                    <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=400&auto=format&fit=crop"
+                        alt="Dr. Rajesh Patel" class="d-card-img">
+                    <div class="d-card-body">
+                        <h4 class="d-card-name">Dr. Rajesh Patel</h4>
+                        <div class="d-card-spec">Orthopedics</div>
+                        <div class="d-card-exp">15+ Years Experience</div>
+                        <p class="text-sm text-muted">MBBS, MS Ortho</p>
+                        <button class="btn btn-outline btn-block mt-4 mb-2">View Profile</button>
+                        <a href="#appointment-booking" class="btn btn-primary btn-block">Book Appointment</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hospital Facilities -->
+    <section id="facilities" class="section-padding reveal">
+        <div class="container">
+            <div class="section-header text-center">
+                <h3 class="section-label">World-class Infrastructure</h3>
+                <h2 class="section-heading">Hospital Facilities</h2>
+                <div class="heading-line"></div>
+            </div>
+            <div class="facilities-grid">
+                <div class="facility-card">
+                    <div class="facility-icon"><i class="fas fa-baby"></i></div>
+                    <h4>NICU</h4>
+                </div>
+                <div class="facility-card">
+                    <div class="facility-icon"><i class="fas fa-procedures"></i></div>
+                    <h4>Operation Theatres</h4>
+                </div>
+                <div class="facility-card">
+                    <div class="facility-icon"><i class="fas fa-microscope"></i></div>
+                    <h4>Diagnostic Labs</h4>
+                </div>
+                <div class="facility-card">
+                    <div class="facility-icon"><i class="fas fa-x-ray"></i></div>
+                    <h4>Digital X-Ray</h4>
+                </div>
+                <div class="facility-card">
+                    <div class="facility-icon"><i class="fas fa-ambulance"></i></div>
+                    <h4>24/7 Emergency</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Patient Testimonials -->
+    <section id="testimonials" class="testimonials-section section-padding reveal">
+        <div class="container">
+            <div class="section-header text-center">
+                <h3 class="section-label">Patient Stories</h3>
+                <h2 class="section-heading">What Our Patients Say</h2>
+                <div class="heading-line"></div>
+            </div>
+            <div class="testimonials-carousel" id="testimonialSlider">
+                <div class="testimonial-card">
+                    <div class="t-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="t-text">"Excellent care and very knowledgeable staff. Dr. Chopda explained everything
+                        clearly and the facilities are very modern."</p>
+                    <div class="t-author">
+                        <div class="t-author-avatar">R</div>
+                        <div class="t-author-name">Rahul D.</div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="t-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="t-text">"The pediatric surgery department took great care of my son. The entire process
+                        from admission to discharge was smooth."</p>
+                    <div class="t-author">
+                        <div class="t-author-avatar">P</div>
+                        <div class="t-author-name">Priya S.</div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="t-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="t-text">"Clean infrastructure and transparent billing. Highly recommend the hospital for
+                        any cardiac consultations."</p>
+                    <div class="t-author">
+                        <div class="t-author-avatar">A</div>
+                        <div class="t-author-name">Amit P.</div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="t-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="t-text">"The emergency team was very quick to respond. Thanks to their timely action, my
+                        father is recovering well from his heart condition."</p>
+                    <div class="t-author">
+                        <div class="t-author-avatar">S</div>
+                        <div class="t-author-name">Sanjay M.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Appointment & Contact -->
+    <section id="appointment-booking" class="infrastructure-section section-padding bg-dark text-white reveal">
+        <div class="container">
+            <div class="grid-2-col gap-lg">
+                <div class="contact-info">
+                    <h3 class="section-label text-light-blue">Reach Out</h3>
+                    <h2 class="section-heading">Contact & Location</h2>
+                    <p class="mb-4">Chopda Institute of Paediatrics and Cardiology is centrally located in Nashik with
+                        easy accessibility.</p>
+
+                    <div class="map-container mb-4">
+                        <iframe class="map-iframe"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3749.123512351235!2d73.789123!3d20.012345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjDCsDAwJzQ0LjQiTiA3M8KwNDcnMjAuOCJF!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin"
+                            allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+
+                    <div class="contact-methods" style="display:flex; flex-direction:column; gap: 1rem;">
+                        <div class="c-row" style="display:flex; align-items:center; gap:10px;">
+                            <i class="fas fa-map-marker-alt text-red" style="font-size:1.5rem; width:25px;"></i>
+                            <span>Near Mahalakshmi Theatre, Dindori Road, Panchavati, Nashik</span>
+                        </div>
+                        <div class="c-row" style="display:flex; align-items:center; gap:10px;">
+                            <i class="fas fa-phone-alt text-red" style="font-size:1.5rem; width:25px;"></i>
+                            <span><a href="tel:+91XXXXXXXXXX" class="text-white">Emergency: 1066</a> | <a
+                                    href="tel:+91XXXXXXXXXX" class="text-white">OPD: 0253 - XXXXXXX</a></span>
+                        </div>
+                        <div class="c-row" style="display:flex; align-items:center; gap:10px;">
+                            <i class="fab fa-whatsapp text-red" style="font-size:1.5rem; width:25px;"></i>
+                            <span><a href="https://wa.me/91XXXXXXXXXX" class="text-white">WhatsApp
+                                    Consultation</a></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="appointment-form-container">
+                    <div class="form-wrapper">
+                        <h3>Book an Appointment</h3>
+                        <p class="form-sub">Request an appointment and our team will confirm your slot shortly.</p>
+                        <form id="booking-form" class="appointment-form">
+                            <div class="form-group">
+                                <label for="fullName">Full Name</label>
+                                <input type="text" id="fullName" name="fullName" placeholder="Rahul Sharma" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="mobileNo">Mobile Number</label>
+                                <input type="tel" id="mobileNo" name="mobileNo" placeholder="+91" required
+                                    pattern="[0-9]{10,12}">
+                            </div>
+                            <div class="form-group">
+                                <label for="prefService">Service / Doctor Preference</label>
+                                <select id="prefService" name="prefService" required>
+                                    <option value="" disabled selected>Select an option</option>
+                                    <option value="dr_chopda">Dr. Anand Chopda (Cardiology)</option>
+                                    <option value="cardiology">General Cardiology</option>
+                                    <option value="medicine">General Medicine</option>
+                                    <option value="pediatrics">Pediatric Surgery</option>
+                                    <option value="diet">Diet & Nutrition</option>
+                                    <option value="other">Other Treatments</option>
+                                </select>
+                            </div>
+                            <div style="display:flex; gap:1rem;">
+                                <div class="form-group" style="flex:1;">
+                                    <label for="prefDate">Preferred Date</label>
+                                    <input type="date" id="prefDate" name="prefDate" required>
+                                </div>
+                                <div class="form-group" style="flex:1;">
+                                    <label for="prefTime">Preferred Time</label>
+                                    <select id="prefTime" name="prefTime" required>
+                                        <option value="" disabled selected>Select</option>
+                                        <option value="morning">Morning (10AM - 1PM)</option>
+                                        <option value="afternoon">Afternoon (2PM - 5PM)</option>
+                                        <option value="evening">Evening (5PM - 8PM)</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message / Symptoms (Optional)</label>
+                                <textarea id="message" name="message" rows="3"
+                                    placeholder="Briefly describe your symptoms"
+                                    style="width:100%; border: 1px solid var(--border-color); border-radius:4px; padding:0.75rem 1rem; font-family:var(--font-body);"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">Confirm Booking Application</button>
+
+                            <!-- Success Message Output -->
+                            <div id="form-success-msg"
+                                style="display:none; margin-top:1rem; padding:1rem; background-color:rgba(16, 185, 129, 0.1); border:1px solid #10B981; color:#059669; border-radius:4px; text-align:center;">
+                                <i class="fas fa-check-circle"
+                                    style="font-size:1.5rem; margin-bottom:0.5rem; display:block;"></i>
+                                Your appointment request has been received. Our team will contact you shortly.
+                            </div>
+
+                            <p class="form-note mt-3"><i class="fas fa-shield-alt"></i> Your data is kept strictly
+                                confidential.</p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <div class="logo">
+                    <div class="logo-ecg">
+                        <svg width="30" height="15" viewBox="0 0 40 20" class="ecg-line">
+                            <path d="M0 10 L10 10 L13 2 L18 18 L22 6 L25 10 L40 10" fill="none" stroke="#ffffff"
+                                stroke-width="2" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <div class="brand-text text-white">
+                        <h2 style="font-size: 1.2rem; margin:0;">CHOPDA HOSPITAL</h2>
+                    </div>
+                </div>
+                <p class="footer-desc mt-2 text-sm text-gray">A multispeciality hospital dedicated to cardiology and
+                    general medicine in Nashik, led by Dr. Anand M. Chopda.</p>
+            </div>
+
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#doctor">Medical Director</a></li>
+                    <li><a href="#services">Cardiology Services</a></li>
+                    <li><a href="#services">General Medicine</a></li>
+                    <li><a href="#services">Specialized Treatments</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom text-center">
+            <p>&copy; 2026 Chopda Hospital, Nashik. All Rights Reserved. | <a href="#">Privacy Policy</a></p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+
+</html>
